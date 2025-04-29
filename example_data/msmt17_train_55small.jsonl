@@ -1,0 +1,342 @@
+[
+    {
+        "system_prompt": "You are a helpful assistant.",
+        "image": [
+            "MSMT17_V1/train_processed/0178/0178_012_05_0303afternoon_0705_5.jpg",
+            "MSMT17_V1/train_processed/0864/0864_016_14_0114morning_1706_2.jpg"
+        ],
+        "conversations": [
+            {
+                "from": "human",
+                "value": "<image> Are these two people the same?<image> Also, guess the person-ID of each image."
+            },
+            {
+                "from": "gpt",
+                "value": "no, id1: 178, id2: 864"
+            }
+        ]
+    },
+    {
+        "system_prompt": "You are a helpful assistant.",
+        "image": [
+            "MSMT17_V1/train_processed/0457/0457_004_01_0113noon_0797_3.jpg",
+            "MSMT17_V1/train_processed/0285/0285_030_04_0303afternoon_1611_2.jpg"
+        ],
+        "conversations": [
+            {
+                "from": "human",
+                "value": "<image> Are these two people the same?<image> Also, guess the person-ID of each image."
+            },
+            {
+                "from": "gpt",
+                "value": "no, id1: 457, id2: 285"
+            }
+        ]
+    },
+    {
+        "system_prompt": "You are a helpful assistant.",
+        "image": [
+            "MSMT17_V1/train_processed/0563/0563_043_01_0113afternoon_1792_2.jpg",
+            "MSMT17_V1/train_processed/0563/0563_038_03_0113afternoon_1748_0.jpg"
+        ],
+        "conversations": [
+            {
+                "from": "human",
+                "value": "<image> Are these two people the same?<image> Also, guess the person-ID of each image."
+            },
+            {
+                "from": "gpt",
+                "value": "yes, id: 563"
+            }
+        ]
+    },
+    {
+        "system_prompt": "You are a helpful assistant.",
+        "image": [
+            "MSMT17_V1/train_processed/0228/0228_017_01_0303afternoon_0377_5.jpg",
+            "MSMT17_V1/train_processed/0228/0228_014_08_0303afternoon_0317_0_ex.jpg"
+        ],
+        "conversations": [
+            {
+                "from": "human",
+                "value": "<image> Are these two people the same?<image> Also, guess the person-ID of each image."
+            },
+            {
+                "from": "gpt",
+                "value": "yes, id: 228"
+            }
+        ]
+    },
+    {
+        "system_prompt": "You are a helpful assistant.",
+        "image": [
+            "MSMT17_V1/train_processed/0051/0051_006_05_0303morning_0806_2_ex.jpg",
+            "MSMT17_V1/train_processed/0051/0051_007_15_0303morning_1001_1.jpg"
+        ],
+        "conversations": [
+            {
+                "from": "human",
+                "value": "<image> Are these two people the same?<image> Also, guess the person-ID of each image."
+            },
+            {
+                "from": "gpt",
+                "value": "yes, id: 51"
+            }
+        ]
+    },
+    {
+        "system_prompt": "You are a helpful assistant.",
+        "image": [
+            "MSMT17_V1/train_processed/0065/0065_012_14_0303morning_1282_4.jpg",
+            "MSMT17_V1/train_processed/0209/0209_016_01_0303afternoon_1598_0.jpg"
+        ],
+        "conversations": [
+            {
+                "from": "human",
+                "value": "<image> Are these two people the same?<image> Also, guess the person-ID of each image."
+            },
+            {
+                "from": "gpt",
+                "value": "no, id1: 65, id2: 209"
+            }
+        ]
+    },
+    {
+        "system_prompt": "You are a helpful assistant.",
+        "image": [
+            "MSMT17_V1/train_processed/0864/0864_023_15_0114morning_1669_0.jpg",
+            "MSMT17_V1/train_processed/0864/0864_017_14_0114morning_1706_2_ex.jpg"
+        ],
+        "conversations": [
+            {
+                "from": "human",
+                "value": "<image> Are these two people the same?<image> Also, guess the person-ID of each image."
+            },
+            {
+                "from": "gpt",
+                "value": "yes, id: 864"
+            }
+        ]
+    },
+    {
+        "system_prompt": "You are a helpful assistant.",
+        "image": [
+            "MSMT17_V1/train_processed/0501/0501_034_04_0113noon_0946_1_ex.jpg",
+            "MSMT17_V1/train_processed/0065/0065_004_07_0303morning_1051_1_ex.jpg"
+        ],
+        "conversations": [
+            {
+                "from": "human",
+                "value": "<image> Are these two people the same?<image> Also, guess the person-ID of each image."
+            },
+            {
+                "from": "gpt",
+                "value": "no, id1: 501, id2: 65"
+            }
+        ]
+    },
+    {
+        "system_prompt": "You are a helpful assistant.",
+        "image": [
+            "MSMT17_V1/train_processed/0563/0563_011_09_0113afternoon_1682_0.jpg",
+            "MSMT17_V1/train_processed/0178/0178_018_01_0303afternoon_0717_0.jpg"
+        ],
+        "conversations": [
+            {
+                "from": "human",
+                "value": "<image> Are these two people the same?<image> Also, guess the person-ID of each image."
+            },
+            {
+                "from": "gpt",
+                "value": "no, id1: 563, id2: 178"
+            }
+        ]
+    },
+    {
+        "system_prompt": "You are a helpful assistant.",
+        "image": [
+            "MSMT17_V1/train_processed/0178/0178_020_01_0303afternoon_0720_2.jpg",
+            "MSMT17_V1/train_processed/0178/0178_011_05_0303afternoon_0703_3_ex.jpg"
+        ],
+        "conversations": [
+            {
+                "from": "human",
+                "value": "<image> Are these two people the same?<image> Also, guess the person-ID of each image."
+            },
+            {
+                "from": "gpt",
+                "value": "yes, id: 178"
+            }
+        ]
+    },
+    {
+        "system_prompt": "You are a helpful assistant.",
+        "image": [
+            "MSMT17_V1/train_processed/0285/0285_034_07_0303afternoon_1597_5.jpg",
+            "MSMT17_V1/train_processed/0285/0285_025_06_0303afternoon_1533_0.jpg"
+        ],
+        "conversations": [
+            {
+                "from": "human",
+                "value": "<image> Are these two people the same?<image> Also, guess the person-ID of each image."
+            },
+            {
+                "from": "gpt",
+                "value": "yes, id: 285"
+            }
+        ]
+    },
+    {
+        "system_prompt": "You are a helpful assistant.",
+        "image": [
+            "MSMT17_V1/train_processed/0864/0864_012_05_0114morning_1615_1.jpg",
+            "MSMT17_V1/train_processed/0065/0065_011_05_0303morning_1072_3.jpg"
+        ],
+        "conversations": [
+            {
+                "from": "human",
+                "value": "<image> Are these two people the same?<image> Also, guess the person-ID of each image."
+            },
+            {
+                "from": "gpt",
+                "value": "no, id1: 864, id2: 65"
+            }
+        ]
+    },
+    {
+        "system_prompt": "You are a helpful assistant.",
+        "image": [
+            "MSMT17_V1/train_processed/0209/0209_021_01_0303afternoon_1601_1_ex.jpg",
+            "MSMT17_V1/train_processed/0209/0209_015_05_0303afternoon_1590_0.jpg"
+        ],
+        "conversations": [
+            {
+                "from": "human",
+                "value": "<image> Are these two people the same?<image> Also, guess the person-ID of each image."
+            },
+            {
+                "from": "gpt",
+                "value": "yes, id: 209"
+            }
+        ]
+    },
+    {
+        "system_prompt": "You are a helpful assistant.",
+        "image": [
+            "MSMT17_V1/train_processed/0501/0501_034_04_0113noon_0946_1_ex.jpg",
+            "MSMT17_V1/train_processed/0501/0501_015_11_0113noon_0829_2_ex.jpg"
+        ],
+        "conversations": [
+            {
+                "from": "human",
+                "value": "<image> Are these two people the same?<image> Also, guess the person-ID of each image."
+            },
+            {
+                "from": "gpt",
+                "value": "yes, id: 501"
+            }
+        ]
+    },
+    {
+        "system_prompt": "You are a helpful assistant.",
+        "image": [
+            "MSMT17_V1/train_processed/0285/0285_010_11_0303afternoon_1505_3_ex.jpg",
+            "MSMT17_V1/train_processed/0178/0178_019_01_0303afternoon_0719_1.jpg"
+        ],
+        "conversations": [
+            {
+                "from": "human",
+                "value": "<image> Are these two people the same?<image> Also, guess the person-ID of each image."
+            },
+            {
+                "from": "gpt",
+                "value": "no, id1: 285, id2: 178"
+            }
+        ]
+    },
+    {
+        "system_prompt": "You are a helpful assistant.",
+        "image": [
+            "MSMT17_V1/train_processed/0228/0228_010_11_0303afternoon_0340_1_ex.jpg",
+            "MSMT17_V1/train_processed/0864/0864_010_05_0114morning_1614_1.jpg"
+        ],
+        "conversations": [
+            {
+                "from": "human",
+                "value": "<image> Are these two people the same?<image> Also, guess the person-ID of each image."
+            },
+            {
+                "from": "gpt",
+                "value": "no, id1: 228, id2: 864"
+            }
+        ]
+    },
+    {
+        "system_prompt": "You are a helpful assistant.",
+        "image": [
+            "MSMT17_V1/train_processed/0457/0457_012_14_0113noon_0792_1_ex.jpg",
+            "MSMT17_V1/train_processed/0457/0457_008_05_0113noon_0813_3_ex.jpg"
+        ],
+        "conversations": [
+            {
+                "from": "human",
+                "value": "<image> Are these two people the same?<image> Also, guess the person-ID of each image."
+            },
+            {
+                "from": "gpt",
+                "value": "yes, id: 457"
+            }
+        ]
+    },
+    {
+        "system_prompt": "You are a helpful assistant.",
+        "image": [
+            "MSMT17_V1/train_processed/0051/0051_000_01_0303morning_0780_6.jpg",
+            "MSMT17_V1/train_processed/0457/0457_010_14_0113noon_0789_2_ex.jpg"
+        ],
+        "conversations": [
+            {
+                "from": "human",
+                "value": "<image> Are these two people the same?<image> Also, guess the person-ID of each image."
+            },
+            {
+                "from": "gpt",
+                "value": "no, id1: 51, id2: 457"
+            }
+        ]
+    },
+    {
+        "system_prompt": "You are a helpful assistant.",
+        "image": [
+            "MSMT17_V1/train_processed/0209/0209_012_05_0303afternoon_1588_5_ex.jpg",
+            "MSMT17_V1/train_processed/0501/0501_022_06_0113noon_0961_1_ex.jpg"
+        ],
+        "conversations": [
+            {
+                "from": "human",
+                "value": "<image> Are these two people the same?<image> Also, guess the person-ID of each image."
+            },
+            {
+                "from": "gpt",
+                "value": "no, id1: 209, id2: 501"
+            }
+        ]
+    },
+    {
+        "system_prompt": "You are a helpful assistant.",
+        "image": [
+            "MSMT17_V1/train_processed/0065/0065_013_14_0303morning_1282_4_ex.jpg",
+            "MSMT17_V1/train_processed/0065/0065_010_05_0303morning_1071_3_ex.jpg"
+        ],
+        "conversations": [
+            {
+                "from": "human",
+                "value": "<image> Are these two people the same?<image> Also, guess the person-ID of each image."
+            },
+            {
+                "from": "gpt",
+                "value": "yes, id: 65"
+            }
+        ]
+    }
+]
