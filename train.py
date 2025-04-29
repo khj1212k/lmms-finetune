@@ -162,6 +162,8 @@ def train():
         assistant_key=data_args.assistant_key
     )
     if data_args.eval_data_path:
+        training_args.eval_strategy = "steps"    # 1) epoch ➜ steps
+        training_args.eval_steps    = 20         # 2) 몇 step마다? 1 이면 매 step
         eval_dataset = LazySupervisedDataset(
             data_path=data_args.eval_data_path,
             image_folder=data_args.image_folder,
