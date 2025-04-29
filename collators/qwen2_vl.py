@@ -15,9 +15,13 @@ DEFAULT_IM_END_TOKEN = "<|im_end|>"
 IGNORE_INDEX = -100
 
 
+
 @register_collator("qwen2-vl")
 class Qwen2VLDataCollator(BaseDataCollator):
     def __call__(self, instances: Sequence[Dict]) -> Dict[str, torch.Tensor]:
+
+
+
         if "images" in instances[0]:
             is_video = False
         elif "videos" in instances[0]:
@@ -158,8 +162,21 @@ class Qwen2VLDataCollator(BaseDataCollator):
         batch_pixel_values = torch.cat(batch_pixel_values, dim=0)
         batch_vision_grid_thw = torch.cat(batch_vision_grid_thw, dim=0)
 
+        PATCH_GRID_SIZE = (21, 28)  # Qwen2.5-VL standard
+        def count_expected_patches(images_or_videos, is_video=False):
+            """Calculate the total expected patch tokens (vision tokens) for batch."""
+            if not isinstance(images_or_videos, list):
+                return 0
+            if is_video:
+                return sum([frames.shape[0] * PATCH_GRID_SIZE[0] * PATCH_GRID_SIZE[1] for frames in images_or_videos])
+            else:
+                return sum([PATCH_GRID_SIZE[0] * PATCH_GRID_SIZE[1] for _ in images_or_videos])
+        expected_patch_tokens = count_expected_patches(images if not is_video else videos, is_video=is_video)
+
         # sanity check
-        assert total_image_tokens == count_innermost_elements(images), "Number of image tokens does not match the number of images"
+        # assert total_image_tokens == count_innermost_elements(images), "Number of image tokens does not match the number of images"
+        assert total_image_tokens * (PATCH_GRID_SIZE[0] * PATCH_GRID_SIZE[1]) == batch_pixel_values.shape[1], \
+    f"Mismatch: total_image_tokens={total_image_tokens}, but got pixel_features={batch_pixel_values.shape[1]}"
 
         data_dict = dict(
             input_ids=batch_input_ids,

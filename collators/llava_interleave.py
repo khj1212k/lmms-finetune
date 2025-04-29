@@ -106,7 +106,8 @@ class LLaVAInterleaveDataCollator(BaseDataCollator):
                     })
                 
             assert len(cur_images) == cur_num_images, "Not all images were used"
-            
+            self.processor.patch_size = 14                     # ViT-L/14
+            self.processor.vision_feature_select_strategy = "patch"
             temp = self.processor.apply_chat_template(
                 cur_text,
                 chat_template=template,
@@ -122,25 +123,25 @@ class LLaVAInterleaveDataCollator(BaseDataCollator):
 
             # expand image tokens
             temp_vision_inputs = self.processor.image_processor(cur_images, return_tensors="pt")
-            if temp_vision_inputs.get("pixel_values") is not None:
-                if patch_size is not None and vision_feature_select_strategy is not None:
-                    # Replace the image token with the expanded image token sequence
-                    pixel_values = temp_vision_inputs["pixel_values"]
-                    height, width = get_image_size(to_numpy_array(pixel_values[0]))
-                    num_image_tokens = (height // patch_size) * (width // patch_size) + 1
-                    if vision_feature_select_strategy == "default":
-                        num_image_tokens -= 1
+            # if temp_vision_inputs.get("pixel_values") is not None:
+            #     if patch_size is not None and vision_feature_select_strategy is not None:
+            #         # Replace the image token with the expanded image token sequence
+            #         pixel_values = temp_vision_inputs["pixel_values"]
+            #         height, width = get_image_size(to_numpy_array(pixel_values[0]))
+            #         num_image_tokens = (height // patch_size) * (width // patch_size) + 1
+            #         if vision_feature_select_strategy == "default":
+            #             num_image_tokens -= 1
 
-                    repeat = torch.where(cur_input_ids == image_token_id, num_image_tokens, 1).squeeze()
-                    cur_input_ids = cur_input_ids.repeat_interleave(repeat, dim=1)
-                    cur_assistant_masks = cur_assistant_masks.repeat_interleave(repeat, dim=1)
-                else:
-                    logger.warning_once(
-                        "Expanding inputs for image tokens in LLaVa should be done in processing. "
-                        "Please add `patch_size` and `vision_feature_select_strategy` to the model's processing config or set directly "
-                        "with `processor.patch_size = {{patch_size}}` and processor.vision_feature_select_strategy = {{vision_feature_select_strategy}}`. "
-                        "Using processors without these attributes in the config is deprecated and will throw an error in v4.47."
-                    )
+            #         repeat = torch.where(cur_input_ids == image_token_id, num_image_tokens, 1).squeeze()
+            #         cur_input_ids = cur_input_ids.repeat_interleave(repeat, dim=1)
+            #         cur_assistant_masks = cur_assistant_masks.repeat_interleave(repeat, dim=1)
+            #     else:
+            #         logger.warning_once(
+            #             "Expanding inputs for image tokens in LLaVa should be done in processing. "
+            #             "Please add `patch_size` and `vision_feature_select_strategy` to the model's processing config or set directly "
+            #             "with `processor.patch_size = {{patch_size}}` and processor.vision_feature_select_strategy = {{vision_feature_select_strategy}}`. "
+            #             "Using processors without these attributes in the config is deprecated and will throw an error in v4.47."
+            #         )
 
             # manual truncation
             if cur_input_ids.shape[1] > max_len:
