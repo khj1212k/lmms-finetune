@@ -19,6 +19,8 @@ class LLaVAInterleaveModelLoader(BaseModelLoader):
             model = None
 
         processor = AutoProcessor.from_pretrained(self.model_hf_path)
+        processor.patch_size = 14                     # ViT-L/14
+        processor.vision_feature_select_strategy = "patch"
         tokenizer = processor.tokenizer
         config = AutoConfig.from_pretrained(self.model_local_path)
         return model, tokenizer, processor, config
